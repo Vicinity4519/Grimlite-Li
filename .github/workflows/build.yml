@@ -23,28 +23,17 @@ jobs:
     - name: Build solution
       run: msbuild "Project Grimlite.sln" /p:Configuration=Release /p:TargetFrameworkVersion=v4.8
 
-    - name: Create ZIP archive
-      run: |
-        $compress = @{
-          Path = @(
-            "bin\Release\Grimoire.exe",
-            "bin\Debug\CharSelect.cfg",
-            "bin\Debug\ClientConfig.cfg",
-            "bin\Debug\config.cfg",
-            "bin\Debug\hotkeys.json"
-            "bin\Debug\Loader\",
-            "resources\Bots\",
-            "resources\Notes\",
-            "resources\Plugins"
-          )
-          CompressionLevel = "Fastest"
-          DestinationPath = "Grimoire.zip"
-        }
-        Compress-Archive @compress
-
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Grimoire
-        path: Grimoire.zip
-
+        path: |
+          bin/Release/Grimoire.exe
+          bin/Debug/CharSelect.cfg
+          bin/Debug/ClientConfig.cfg
+          bin/Debug/config.cfg
+          bin/Debug/hotkeys.json
+          bin/Debug/Loader/
+          resources/Bots/
+          resources/Notes/
+          resources/Plugins/
