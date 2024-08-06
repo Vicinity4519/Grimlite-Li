@@ -1,33 +1,33 @@
 ﻿namespace Grimoire.UI.Maid
 {
-	partial class MaidRemake
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class MaidRemake
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaidRemake));
             this.trgtUsrnmLabel = new DarkUI.Controls.DarkLabel();
@@ -718,56 +718,56 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
+        }
 
-		#endregion
-		private System.Windows.Forms.Timer timerStopAttack;
-		internal System.Windows.Forms.ComboBox cmbGotoUsername;
-		private DarkUI.Controls.DarkLabel trgtUsrnmLabel;
-		public DarkUI.Controls.DarkCheckBox cbEnablePlugin;
-		internal DarkUI.Controls.DarkTextBox tbSkillList;
-		private DarkUI.Controls.DarkLabel label4;
-		private DarkUI.Controls.DarkGroupBox gbOptions;
-		private DarkUI.Controls.DarkCheckBox cbStopIf;
-		private DarkUI.Controls.DarkNumericUpDown numRelogDelay;
-		private DarkUI.Controls.DarkCheckBox cbUnfollow;
-		public DarkUI.Controls.DarkCheckBox cbStopAttack;
-		private DarkUI.Controls.DarkCheckBox cbEnableGlobalHotkey;
-		private DarkUI.Controls.DarkGroupBox gbAdvancedOptions;
-		internal DarkUI.Controls.DarkTextBox tbBuffSkill;
-		internal DarkUI.Controls.DarkCheckBox cbBuffIfStop;
-		private DarkUI.Controls.DarkTextBox tbAttPriority;
-		private DarkUI.Controls.DarkCheckBox cbAttackPriority;
-		internal DarkUI.Controls.DarkCheckBox cbUseHeal;
-		internal DarkUI.Controls.DarkTextBox tbHealSkill;
-		internal DarkUI.Controls.DarkNumericUpDown numHealthPercent;
-		private DarkUI.Controls.DarkLabel lbUseHeal2;
-		private DarkUI.Controls.DarkLabel label1;
-		private DarkUI.Controls.DarkComboBox cmbPreset;
-		private DarkUI.Controls.DarkLabel label2;
-		private System.Windows.Forms.Label lbStopAttackBg;
-		internal DarkUI.Controls.DarkCheckBox cbWaitSkill;
-		internal DarkUI.Controls.DarkCheckBox cbHandleLockedMap;
-		private System.Windows.Forms.LinkLabel lblLockedMapSetting;
-		private DarkUI.Controls.DarkNumericUpDown numSkillDelay;
-		private DarkUI.Controls.DarkLabel darkLabel1;
-		public DarkUI.Controls.DarkCheckBox cbCopyWalk;
-		private DarkUI.Controls.DarkButton btnSave;
-		private DarkUI.Controls.DarkButton btnLoad;
-		private DarkUI.Controls.DarkCheckBox cbPartyCmd;
-		private DarkUI.Controls.DarkLabel darkLabel2;
-		private DarkUI.Controls.DarkGroupBox gbActivation;
-		private System.Windows.Forms.LinkLabel lblWhitelistMap;
-		public DarkUI.Controls.DarkCheckBox cbWhitelistMap;
-		private DarkUI.Controls.DarkLabel darkLabel3;
-		private DarkUI.Controls.DarkGroupBox gbConfig;
-		internal DarkUI.Controls.DarkTextBox tbSpecialMsg;
-		private DarkUI.Controls.DarkGroupBox darkGroupBox1;
-		private DarkUI.Controls.DarkButton btnMe;
-		internal DarkUI.Controls.DarkNumericUpDown numSkillAct;
-		private DarkUI.Controls.DarkLabel darkLabel5;
-		private DarkUI.Controls.DarkComboBox cmbUltraBoss;
-		public DarkUI.Controls.DarkCheckBox cbAntiCounter;
-		private DarkUI.Controls.DarkCheckBox cbSpecialAnims;
-	}
+        #endregion
+        private System.Windows.Forms.Timer timerStopAttack;
+        internal System.Windows.Forms.ComboBox cmbGotoUsername;
+        private DarkUI.Controls.DarkLabel trgtUsrnmLabel;
+        public DarkUI.Controls.DarkCheckBox cbEnablePlugin;
+        internal DarkUI.Controls.DarkTextBox tbSkillList;
+        private DarkUI.Controls.DarkLabel label4;
+        private DarkUI.Controls.DarkGroupBox gbOptions;
+        private DarkUI.Controls.DarkCheckBox cbStopIf;
+        private DarkUI.Controls.DarkNumericUpDown numRelogDelay;
+        private DarkUI.Controls.DarkCheckBox cbUnfollow;
+        public DarkUI.Controls.DarkCheckBox cbStopAttack;
+        private DarkUI.Controls.DarkCheckBox cbEnableGlobalHotkey;
+        private DarkUI.Controls.DarkGroupBox gbAdvancedOptions;
+        internal DarkUI.Controls.DarkTextBox tbBuffSkill;
+        internal DarkUI.Controls.DarkCheckBox cbBuffIfStop;
+        private DarkUI.Controls.DarkTextBox tbAttPriority;
+        private DarkUI.Controls.DarkCheckBox cbAttackPriority;
+        internal DarkUI.Controls.DarkCheckBox cbUseHeal;
+        internal DarkUI.Controls.DarkTextBox tbHealSkill;
+        internal DarkUI.Controls.DarkNumericUpDown numHealthPercent;
+        private DarkUI.Controls.DarkLabel lbUseHeal2;
+        private DarkUI.Controls.DarkLabel label1;
+        private DarkUI.Controls.DarkComboBox cmbPreset;
+        private DarkUI.Controls.DarkLabel label2;
+        private System.Windows.Forms.Label lbStopAttackBg;
+        internal DarkUI.Controls.DarkCheckBox cbWaitSkill;
+        internal DarkUI.Controls.DarkCheckBox cbHandleLockedMap;
+        private System.Windows.Forms.LinkLabel lblLockedMapSetting;
+        private DarkUI.Controls.DarkNumericUpDown numSkillDelay;
+        private DarkUI.Controls.DarkLabel darkLabel1;
+        public DarkUI.Controls.DarkCheckBox cbCopyWalk;
+        private DarkUI.Controls.DarkButton btnSave;
+        private DarkUI.Controls.DarkButton btnLoad;
+        private DarkUI.Controls.DarkCheckBox cbPartyCmd;
+        private DarkUI.Controls.DarkLabel darkLabel2;
+        private DarkUI.Controls.DarkGroupBox gbActivation;
+        private System.Windows.Forms.LinkLabel lblWhitelistMap;
+        public DarkUI.Controls.DarkCheckBox cbWhitelistMap;
+        private DarkUI.Controls.DarkLabel darkLabel3;
+        private DarkUI.Controls.DarkGroupBox gbConfig;
+        internal DarkUI.Controls.DarkTextBox tbSpecialMsg;
+        private DarkUI.Controls.DarkGroupBox darkGroupBox1;
+        private DarkUI.Controls.DarkButton btnMe;
+        internal DarkUI.Controls.DarkNumericUpDown numSkillAct;
+        private DarkUI.Controls.DarkLabel darkLabel5;
+        private DarkUI.Controls.DarkComboBox cmbUltraBoss;
+        public DarkUI.Controls.DarkCheckBox cbAntiCounter;
+        private DarkUI.Controls.DarkCheckBox cbSpecialAnims;
+    }
 }
