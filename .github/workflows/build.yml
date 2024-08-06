@@ -22,3 +22,9 @@ jobs:
 
     - name: Build solution
       run: msbuild "Project Grimlite.sln" /p:Configuration=Release /p:TargetFrameworkVersion=v4.8
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Grimoire.exe
+        path: bin\Release\Grimoire.exe
