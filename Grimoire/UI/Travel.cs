@@ -902,7 +902,7 @@ namespace Grimoire.UI
         private async void btnIceSpiritIceStormArena_Click(object sender, EventArgs e)
         {
             btnIceSpiritIceStormArena.Enabled = false;
-            Player.JoinMap("icestormarena" + (chkPriv.Checked ? $"-{numPriv.Value}" : ""), "r3c", "Left");
+            Player.JoinMap("icestormarena", "r3c", "Left");
             while (!Player.Map.Equals("icestormarena", StringComparison.OrdinalIgnoreCase))
             {
                 await Task.Delay(1000);
