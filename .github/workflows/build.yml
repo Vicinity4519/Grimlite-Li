@@ -23,17 +23,21 @@ jobs:
     - name: Build solution
       run: msbuild "Project Grimlite.sln" /p:Configuration=Release /p:TargetFrameworkVersion=v4.8
 
+    - name: Prepare files for upload
+      run: |
+        mkdir artifact
+        copy bin\Release\Grimoire.exe artifact\
+        copy bin\Debug\CharSelect.cfg artifact\
+        copy bin\Debug\ClientConfig.cfg artifact\
+        copy bin\Debug\config.cfg artifact\
+        copy bin\Debug\hotkeys.json artifact\
+        xcopy /E /I bin\Debug\Loader artifact\Loader
+        xcopy /E /I resources\Bots artifact\Bots
+        xcopy /E /I resources\Notes artifact\Notes
+        xcopy /E /I resources\Plugins artifact\Plugins
+
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Grimoire
-        path: |
-          bin/Release/Grimoire.exe => Grimoire.exe
-          bin/Debug/CharSelect.cfg => CharSelect.cfg
-          bin/Debug/ClientConfig.cfg => ClientConfig.cfg
-          bin/Debug/config.cfg => config.cfg
-          bin/Debug/hotkeys.json => hotkeys.json
-          bin/Debug/Loader/ => Loader/
-          resources/Bots/ => Bots/
-          resources/Notes/ => Notes/
-          resources/Plugins => Plugins/
+        name: Grimoire.zip
+        path: artifact
