@@ -28,12 +28,12 @@ jobs:
       with:
         name: Grimoire
         path: |
-          bin/Release/Grimoire.exe
-          bin/Debug/CharSelect.cfg
-          bin/Debug/ClientConfig.cfg
-          bin/Debug/config.cfg
-          bin/Debug/hotkeys.json
-          bin/Debug/Loader/
-          resources/Bots/
-          resources/Notes/
-          resources/Plugins/
+          bin/Release/Grimoire.exe => Grimoire.exe
+          bin/Debug/CharSelect.cfg => CharSelect.cfg
+          bin/Debug/ClientConfig.cfg => ClientConfig.cfg
+          bin/Debug/config.cfg => config.cfg
+          bin/Debug/hotkeys.json => hotkeys.json
+          bin/Debug/Loader/ => Loader/
+          resources/Bots/ => Bots/
+          resources/Notes/ => Notes/
+          resources/Plugins => Plugins/
