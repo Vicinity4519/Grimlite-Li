@@ -207,7 +207,7 @@ namespace Grimoire.Networking
 			}
 		}
 
-		private Message CreateMessage(string raw)
+		public Message CreateMessage(string raw)
 		{
 			if (raw != null && raw.Length > 0)
 			{

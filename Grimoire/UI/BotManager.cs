@@ -3324,5 +3324,88 @@ namespace Grimoire.UI
 			await Task.Delay(1000);
 			btnLoadMap.Enabled = true;
 		}
-	}
+
+        private void cbxAutoLoopTaunt_CheckedChanged(object sender, EventArgs e)
+        {
+            bool on = cbxAutoLoopTaunt.Checked;
+            if (on)
+            {
+                int player = -1;
+                switch (cbAutoLoopTauntPlayer.SelectedIndex)
+                {
+                    case 0: player = 1; break;
+                    case 1: player = 2; break;
+                }
+
+                if (player == -1)
+                {
+                    return;
+                }
+
+                Flash.FlashCall2 += AnimsMsgHandler;
+            }
+            else
+            {
+                Flash.FlashCall2 -= AnimsMsgHandler;
+                msgCount = 0;
+            }
+        }
+
+		private int msgCount = 0;
+
+        private async void AnimsMsgHandler(string function, params object[] args)
+        {
+            if (function != "packetFromServer") return;
+            try
+            {
+                Networking.Message message = Grimoire.Networking.Proxy.Instance.CreateMessage((string)args[0]);
+                if (message is JsonMessage)
+                {
+                    JsonMessage jsonMessage = message as JsonMessage;
+                    if (jsonMessage.DataObject?["anims"] != null)
+                    {
+                        JArray anims = (JArray)jsonMessage.DataObject["anims"];
+                        if (anims != null)
+                        {
+                            foreach (JObject anim in anims)
+                            {
+                                string msg = anim?["msg"]?.ToString()?.ToLower();
+                                if (msg != null)
+                                {
+                                    string inputMsg = inputAutoLoopTauntMsg.Text?.ToLower();
+
+                                    if (msg.Contains(inputMsg))
+                                    {
+                                        bool act = true;
+                                        msgCount++;
+
+                                        int player = cbAutoLoopTauntPlayer.SelectedIndex + 1;
+
+                                        if (player == 1)
+                                        {
+                                            act = msgCount % 2 != 0 || !msg.Contains(inputMsg);
+                                        }
+                                        else if (player == 2)
+                                        {
+                                            act = msgCount % 2 == 0 || !msg.Contains(inputMsg);
+                                        }
+
+                                        if (act && Player.HasTarget)
+                                        {
+											string skillAct = numAutoLoopTauntSkillAction.Value.ToString();
+											await Task.Delay(Player.SkillAvailable(skillAct));
+                                            Player.UseSkill(skillAct);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+            }
+        }
+    }
 }
